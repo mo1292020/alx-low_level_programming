@@ -12,8 +12,4 @@ echo '{' >> "$1"
 echo 'return (0);' >> "$1"
 echo '}' >> "$1"
 chmod 755 "$1"
-git add .
-git commit -m "CharmQuark"
-git push
-
-
+emacs "$1"
