@@ -8,7 +8,9 @@
 
 int main(void)
 {
-	for (int h = 97; h <= 122; h++)
+	int h;
+
+	for (h = 97; h <= 122; h++)
 		printf("%c", h);
 
 	printf("\n");
