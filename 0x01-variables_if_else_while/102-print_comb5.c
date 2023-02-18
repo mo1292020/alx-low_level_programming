@@ -16,8 +16,11 @@ int main(void)
 		{
 			for (m = h; m < 10; m++)
 			{
-				for (n = d + 1; n < 10; n++)
+				for (n = 0; n < 10; n++)
 				{
+					if (h == m && d == n)
+						continue;
+					
 					putchar(h + '0');
 					putchar(d + '0');
 					putchar(' ');
