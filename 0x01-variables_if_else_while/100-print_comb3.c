@@ -16,8 +16,8 @@ int main(void)
 		for (d = h + 1; d < 10; d++)
 		{
 
-			putchar(h + 48);
-			putchar(d + 48);
+			putchar(h + '0');
+			putchar(d + '0');
 
 			if (h != 8 && d != 9)
 			{
