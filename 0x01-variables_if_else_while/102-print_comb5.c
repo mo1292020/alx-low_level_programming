@@ -18,6 +18,8 @@ int main(void)
 			{
 				for (n = d; n < 10; n++)
 				{
+					if (h == m && d == n)
+						continue;
 
 					putchar(h + '0');
 					putchar(d + '0');
