@@ -8,29 +8,32 @@
 
 int main(void)
 {
-	int h, d;
+	int firstDigit = 0, seconDigit;
 
-	for (h = 0; h < 99; h++)
+	while (firstDigit <= 99)
 	{
-		for (d = h ; d < 100; d++)
+		seconDigit = firstDigit;
+		while (seconDigit <= 99)
 		{
-			if (h == d)
-				continue;
-			putchar(h / 10 + '0');
-			putchar(h % 10 + '0');
-			putchar(' ');
-			putchar(d / 10 + '0');
-			putchar(d % 10 + '0');
-			if (h == 98 && d == 99)
-				continue;
-			putchar(',');
-			putchar(' ');
-		}
-	}
+			if (seconDigit != firstDigit)
+			{
+				putchar((firstDigit / 10) + 48);
+				putchar((firstDigit % 10) + 48);
+				putchar(' ');
+				putchar((seconDigit / 10) + 48);
+				putchar((seconDigit % 10) + 48);
 
+				if (firstDigit != 98 || seconDigit != 99)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+			++seconDigit;
+		}
+		++firstDigit;
+	}
 	putchar('\n');
 
-
 	return (0);
-
 }
