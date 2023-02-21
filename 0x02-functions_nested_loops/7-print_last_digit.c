@@ -1,12 +1,14 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
- * main - Entry point
+ * print_last_digit - function to print last digit of an integer
  *
- * Return: Always 0 (Success)
+ *@n : check input of function
+ *
+ * Return: Always return last digit of 'n'
 */
 
-int main(void)
+int print_last_digit(int n)
 {
-return (0);
+	return (n % 10);
 }
