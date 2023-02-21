@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * _isalpha - function to check if input is lowercase or uppercase character
