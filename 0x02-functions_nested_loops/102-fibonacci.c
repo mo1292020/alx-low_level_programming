@@ -8,14 +8,14 @@
 
 int main(void)
 {
-	long long int h, x = 1, y = 2;
+	unsigned long int h, x = 1, y = 2;
 
-	printf("%lld, ", x);
+	printf("%lu, ", x);
 
 	for (h = 0; h < 50; h++)
 	{
 
-		printf("%lld", y);
+		printf("%lu", y);
 
 		y += x;
 		x = y - x;
