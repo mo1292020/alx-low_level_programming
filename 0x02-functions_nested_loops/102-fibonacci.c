@@ -12,7 +12,7 @@ int main(void)
 
 	printf("%lu, ", x);
 
-	for (h = 0; h < 50; h++)
+	for (h = 1; h < 50; h++)
 	{
 
 		printf("%lu", y);
@@ -20,7 +20,7 @@ int main(void)
 		y += x;
 		x = y - x;
 
-		if (h != 50)
+		if (h != 49)
 			printf(", ");
 
 	}
