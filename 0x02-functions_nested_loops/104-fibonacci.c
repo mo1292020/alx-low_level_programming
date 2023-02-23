@@ -8,17 +8,20 @@
 
 int main(void)
 {
-	unsigned long int x = 1, y = 2, sum = 0;
+	unsigned long int h, x = 1, y = 2, sum = 0;
 
+	printf("%lu, ", x);
 
-	while (y < 4000000)
+	for (h = 1; h < 98; h++)
 	{
 
-		if (y % 2 == 0)
-			sum += y;
+		printf("%lu", y);
 
 		y += x;
 		x = y - x;
+
+		if (h != 97)
+			printf(", ");
 
 	}
 
