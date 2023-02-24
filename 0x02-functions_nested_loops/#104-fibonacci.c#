@@ -1,0 +1,79 @@
+#include <stdio.h>
+#include <string.h>
+
+
+char  *sumString(char *x, char *y)
+{
+	if (strlen(x) > strlen(y))
+	{
+		char *t;
+
+		t = x;
+		x = y;
+		y = t;
+	}
+
+	char *res = "";
+	int xs = strlen(x), ys = strlen(y), diff = ys - xs, carry = 0, h;
+
+	for (h = xs - 1; h >= 0; h--)
+	{
+		int sum = ((x[h] - '0') + (y[h + diff] - '0') + carry);
+
+		res += ((sum % 10) + '0');
+		carry = sum / 10;
+	}
+
+	for (h = ys - xs - 1; h >= 0; h--)
+	{
+		int sum = ((y[h] - '0') + carry);
+
+		res += ((sum % 10) + '0');
+		carry = sum / 10;
+	}
+
+	if (carry)
+		res += (carry + '0');
+
+	char *fin = res;
+	int sz = strlen(res);
+
+	for (h = 0; h < sz; h++)
+	{
+		fin[h] = res[sz - (h + 1)];
+	}
+
+	return (fin);
+
+}
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+*/
+
+int main(void)
+{
+	unsigned long int h, x = 1, y = 2, sum = 0;
+
+	printf("%lu, ", x);
+
+	for (h = 1; h < 98; h++)
+	{
+
+		printf("%lu", y);
+
+		y += x;
+		x = y - x;
+
+		if (h != 97)
+			printf(", ");
+
+	}
+
+	printf("%lu\n", sum);
+
+
+	return (0);
+
+}
