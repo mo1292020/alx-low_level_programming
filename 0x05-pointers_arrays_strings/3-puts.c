@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * _puts - Function to print string
@@ -11,5 +11,5 @@
 void _puts(char *str)
 {
 	for (; *str != '\0'; ++str)
-		putchar(*str + 0);
+		_putchar(*str + 0);
 }
