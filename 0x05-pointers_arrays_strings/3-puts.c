@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * _strlen - Function to print string
+ * _puts - Function to print string
  *
  * @str :string parameter
  *
@@ -11,5 +11,5 @@
 void _puts(char *str)
 {
 	for (; *str != '\0'; ++str)
-		putchar(*str);
+		putchar(*str + 0);
 }
