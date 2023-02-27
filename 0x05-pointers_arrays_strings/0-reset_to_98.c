@@ -3,7 +3,7 @@
 /**
  * reset_to_98 - Function that take a pointer and update value to 98
  *
- * @ *n : check in
+ * @n : check in
  *
  * Return void (Success)
 */
