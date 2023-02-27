@@ -1,9 +1,11 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * reset_to_98 - Function that take a pointer and update value to 98
  *
- * Return: Always 0 (Success)
+ * @ *n : check in
+ *
+ * Return void (Success)
 */
 
 void  reset_to_98(int *n)
