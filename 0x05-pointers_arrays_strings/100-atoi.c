@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _atoi : Function to convert string number to integr
+ * _atoi - Function to convert string number to integr
  * and return them
  *
  * @s: input number as a parameter
