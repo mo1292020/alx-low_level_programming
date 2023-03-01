@@ -9,15 +9,15 @@
 
 int _atoi(char *s)
 {
-	int h, res = 0, flag = 0;
+	int h, res = 0, flag = 1;
 
 	for (h = 0; s[h] != '\0'; h++)
 	{
+		if (s[h] == '-')
+			flag *= -1;
+
 		if (s[h] >= 48 && s[h] <= 57)
 		{
-			if (h > 0)
-				if (s[h - 1] == '-')
-					flag = 1;
 			while (s[h] >= 48 && s[h] <= 57 && s[h] != '\0')
 			{
 				res *= 10;
