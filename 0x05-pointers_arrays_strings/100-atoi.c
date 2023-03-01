@@ -28,5 +28,5 @@ int _atoi(char *s)
 		}
 	}
 
-	return ((flag == 0) ? (res) : (res * -1));
+	return (res * flag);
 }
