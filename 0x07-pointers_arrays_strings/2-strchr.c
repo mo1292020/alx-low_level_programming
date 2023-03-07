@@ -3,10 +3,10 @@
 /**
  * _strchr  - Function that locate a character in a string
  *
- * @s :string parameter
- * @c :char parameter
+ * @s: string parameter
+ * @c: char parameter
  *
- * Return :a pointer to the first occurrence of the character c in the
+ * Return: a pointer to the first occurrence of the character c in the
  * string s, or NULL if the character is not found
 */
 
