@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * _strpbrk - Function  that locates a substring
+ * _strstr - Function  that locates a substring
  *
  * @haystack: string parameter
  * @needle: string parameter
