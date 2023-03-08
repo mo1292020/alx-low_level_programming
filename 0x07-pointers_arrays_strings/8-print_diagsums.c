@@ -12,8 +12,7 @@
 
 void print_diagsums(int *a, int size)
 {
-	int h;
-	long int res1 = 0, res2 = 0;
+	int h,  res1 = 0, res2 = 0;
 
 	for (h = 0; h < size * size; h++)
 	{
@@ -22,6 +21,6 @@ void print_diagsums(int *a, int size)
 		if (h % (size - 1) == 0 && h != 0 && h < size * size - 1)
 			res2 += a[h];
 	}
-	printf("%lu, %lu\n", res1, res2);
+	printf("%d, %d\n", res1, res2);
 
 }
