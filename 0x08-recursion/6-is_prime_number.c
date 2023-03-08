@@ -33,5 +33,5 @@ int is_prime_number(int n)
 {
 	if (n <= 2)
 		return ((n == 2) ? 1 : 0);
-	return (prime_or_not(n, sqrt(n)));
+	return (prime_or_not(n, (int)sqrt(n)));
 }
