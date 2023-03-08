@@ -13,9 +13,9 @@
 int prime_or_not(int n, int h)
 {
 	if (h == 1)
-		return (0);
-	else if (n % h == 0)
 		return (1);
+	else if (n % h == 0)
+		return (0);
 	else
 		return (prime_or_not(n, h - 1));
 }
@@ -31,7 +31,12 @@ int prime_or_not(int n, int h)
 
 int is_prime_number(int n)
 {
+	int x;
+
 	if (n <= 2)
 		return ((n == 2) ? 1 : 0);
-	return (prime_or_not(n, (int)sqrt(n)));
+
+	x = (int)sqrt(n);
+
+	return (prime_or_not(n, x));
 }
