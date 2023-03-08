@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * print_diagsums - that prints the sum of the two
+ * print_diagsums - Function that prints the sum of the two
  * diagonals of a square matrix of integers.
  *
  * @a: input pointer
@@ -19,9 +19,9 @@ void print_diagsums(int *a, int size)
 	{
 		if (h % (size + 1) == 0)
 			res1 += a[h];
-		if (h % (size - 1) == 0 && h != 0 && h != size * size - 1)
+		if (h % (size - 1) == 0 && h != 0 && h < size * size - 1)
 			res2 += a[h];
 	}
-	printf("%lu, %lu", res1, res2);
+	printf("%lu, %lu\n", res1, res2);
 
 }
