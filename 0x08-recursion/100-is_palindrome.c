@@ -17,8 +17,6 @@ int check_palindrome(char *s, int st, int size)
 
 	if (st == (int)size / 2)
 		return (1);
-	else if (s[st] == s[size - (st + 1)])
-		return (1);
 	else if (s[st] != s[size - (st + 1)])
 		return (0);
 	return (check_palindrome(s, st + 1, size));
