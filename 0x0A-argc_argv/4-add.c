@@ -15,6 +15,7 @@ int is_number(char *number)
 	{
 		if (*number < 48 || *number > 57)
 			return (0);
+		number++;
 	}
 	return (1);
 }
@@ -39,7 +40,7 @@ int main(int argc, char *argv[])
 	{
 		int h, res = 0;
 
-		for (h = 2; h < argc; h++)
+		for (h = 2; h <= argc; h++)
 			res += atoi(argv[h - 1]);
 
 		printf("%d\n", res);
