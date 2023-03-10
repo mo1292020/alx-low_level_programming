@@ -12,7 +12,13 @@
 
 int parse_int(char *number)
 {
-	int res = 0;
+	int res = 0, f = 1;
+
+	if (*number == '-')
+	{
+		f = -1;
+		number++;
+	}
 
 	while (*number != '\0')
 	{
@@ -20,7 +26,8 @@ int parse_int(char *number)
 		res += (*number - 48);
 		number++;
 	}
-	return (res);
+
+	return (res * f);
 }
 
 /**
