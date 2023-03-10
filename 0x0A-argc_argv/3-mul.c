@@ -2,34 +2,6 @@
 #include <stdlib.h>
 
 /**
- * parst_int - function to convert string to int
- *
- * @number: string parameter
- *
- * Return: number in int tybe
- */
-
-int parse_int(char *number)
-{
-	int res = 0, f = 1;
-
-	if (*number == '-')
-	{
-		f = -1;
-		number++;
-	}
-
-	while (*number != '\0')
-	{
-		res *= 10;
-		res += (*number - 48);
-		number++;
-	}
-
-	return (res * f);
-}
-
-/**
  * main - Entry point
  *
  * @argc: int parameter
@@ -47,12 +19,8 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		int x, y, res;
+		int res;
 
-		x = parse_int(argv[1]);
-		y = parse_int(argv[2]);
-
-		res = x * y;
 		res = atoi(argv[1]) * atoi(argv[2]);
 
 		printf("%d\n", res);
