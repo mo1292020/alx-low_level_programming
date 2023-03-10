@@ -18,6 +18,7 @@ int parse_int(char *number)
 	{
 		res *= 10;
 		res += (*number - 48);
+		number++;
 	}
 	return (res);
 }
