@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <time.h>
 #include <stdlib.h>
 
 /**
@@ -54,6 +53,7 @@ int main(int argc, char *argv[])
 		y = parse_int(argv[2]);
 
 		res = x * y;
+		res = atoi(argv[1]) * atoi(argv[2]);
 
 		printf("%d\n", res);
 	}
