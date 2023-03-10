@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
 
 		res = x * y;
 
-		printf("%i\n", res);
+		printf("%d\n", res);
 
 		return (0);
 	}
