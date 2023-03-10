@@ -29,10 +29,7 @@ int is_number(char *number)
 
 int main(int argc, char *argv[])
 {
-	if (argc < 3)
-		printf("0\n");
-
-	else if (!is_number(argv[1]) || !is_number(argv[2]))
+	if (!is_number(argv[1]) || !is_number(argv[2]))
 	{
 		printf("Error\n");
 		return (1);
@@ -40,9 +37,10 @@ int main(int argc, char *argv[])
 
 	else
 	{
-		int res;
+		int h, res = 0;
 
-		res = atoi(argv[1]) + atoi(argv[2]);
+		for (h = 2; h < argc; h++)
+			res += atoi(argv[h - 1]);
 
 		printf("%d\n", res);
 	}
