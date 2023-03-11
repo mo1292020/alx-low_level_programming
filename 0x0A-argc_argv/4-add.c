@@ -13,7 +13,7 @@ int is_number(char *number)
 {
 	while (*number != '\0')
 	{
-		if (!isdigit(*number))
+		if (*number < 48 || *number > 57)
 			return (0);
 		number++;
 	}
@@ -30,21 +30,21 @@ int is_number(char *number)
 
 int main(int argc, char *argv[])
 {
-	if (!is_number(argv[1]) || !is_number(argv[2]))
+
+	int h, res = 0;
+
+	for (h = 2; h <= argc; h++)
 	{
-		printf("Error\n");
-		return (1);
+		if (!is_number(argv[h - 1]))
+			{
+				printf("Error\n");
+				return (1);
+			}
+
+		res += atoi(argv[h - 1]);
 	}
 
-	else
-	{
-		int h, res = 0;
-
-		for (h = 2; h <= argc; h++)
-			res += atoi(argv[h - 1]);
-
-		printf("%d\n", res);
-	}
+	printf("%d\n", res);
 
 	return (0);
 }
