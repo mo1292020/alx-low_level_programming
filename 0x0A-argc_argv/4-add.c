@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * is_number - function to check string is number or not
+ * isNum - function to check string is number or not
  *
  * @number: string parameter
  *
