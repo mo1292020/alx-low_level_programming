@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <ctype.h>
 /**
  * is_number - function to check string is number or not
  *
@@ -13,7 +13,7 @@ int is_number(char *number)
 {
 	while (*number != '\0')
 	{
-		if (*number < 48 || *number > 57)
+		if (!isdigit(*number))
 			return (0);
 		number++;
 	}
