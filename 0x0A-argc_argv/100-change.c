@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	{
 		if (num >= arr[h])
 		{
-			x = (int)(num / arr[h]);
+			x = num / arr[h];
 			res += x;
 			num -= (arr[h] * x);
 			h--;
