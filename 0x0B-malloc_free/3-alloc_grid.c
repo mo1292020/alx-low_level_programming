@@ -2,7 +2,7 @@
 #include <string.h>
 
 /**
- * _strdup - Function that returns a pointer
+ * alloc_grid - Function that returns a pointer
  * to a 2 dimensional array of integers.
  *
  * @width :int parameter
