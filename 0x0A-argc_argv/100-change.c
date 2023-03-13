@@ -1,11 +1,13 @@
-#include <stdio.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Entry point  that prints the minimum number of
+ * coins to make change for an amount of money.
  *
  * @argc: int parameter
  * @argv: string parameter
+ *
  * Return: Always 0 (Success)
 */
 
@@ -32,7 +34,7 @@ int main(int argc, char *argv[])
 		}
 	}
 
-	printf("%i\n", res);
+	printf("%d\n", res);
 
 	return (0);
 }
