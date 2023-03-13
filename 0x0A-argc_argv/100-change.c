@@ -13,13 +13,14 @@
 
 int main(int argc, char *argv[])
 {
+
+	int h, num, x, res = 0, arr[5] = {25, 10, 5, 2, 1};
+
 	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-
-	int h, num, x, res = 0, arr[5] = {25, 10, 5, 2, 1};
 
 	num = atoi(argv[1]);
 
