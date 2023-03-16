@@ -5,9 +5,8 @@
  *
  * @b :unsigned int parameter
  *
- * Return: a pointer to the allocated memory if malloc fails, the
- * malloc_checked function should cause normal process termination with
- * a status value of 98
+ * Return: a pointer to the allocated memory
+ * exit a status value of 98 if fail
 */
 
 void *malloc_checked(unsigned int b)
@@ -20,5 +19,4 @@ void *malloc_checked(unsigned int b)
 		exit(98);
 
 	return (p);
-
 }
