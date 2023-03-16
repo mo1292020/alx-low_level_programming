@@ -3,7 +3,7 @@
 /**
  * malloc_checked - Function that allocates memory using malloc.
  *
- * @b :unsigned int parameter
+ * @b :amount of byte
  *
  * Return: a pointer to the allocated memory
  * exit a status value of 98 if fail
