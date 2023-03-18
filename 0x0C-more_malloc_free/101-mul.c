@@ -88,7 +88,10 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	multiply(argv[1], argv[2]);
+	if (*argv[1] == '0' || *argv[2] == '0')
+		printf("0\n");
+	else
+		multiply(argv[1], argv[2]);
 
 	return (0);
 }
