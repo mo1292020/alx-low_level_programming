@@ -1,33 +1,52 @@
-#include <stdlib.h>
+#include "main.h"
 
 /**
- * array_range - Function that creates an array of integers.
+ * _realloc - Function that reallocates a memory block using malloc and free
  *
- * @min :int parameter.
- * @max :int parameter.
+ * @ptr :void pointer to the memory previously allocated
+ * with a call to malloc.
+ * @old_size :unsigned int parameter, the size, in bytes,
+ * of the allocated space for ptr.
+ * @new_size :unsigned int parameter, the new size,
+ * in bytes of the new memory block.
  *
- * Return: the pointer to the newly created array
- * If min > max, return NULL
- * If malloc fails, return NULL
+ * Return: ptr after allocate.
 */
 
-int *array_range(int min, int max)
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	int h, d, size;
-	int *p;
+	unsigned int h;
+	int *p, *t;
 
-	size = (max - min) + 1;
+	if (old_size == new_size)
+		return (ptr);
 
-	if (min > max)
+	if (ptr == NULL)
+	{
+		p = malloc(new_size);
+		if (p == NULL)
+			return (NULL);
+		free(ptr);
+		return (p);
+	}
+
+	if (new_size == 0 && ptr != NULL)
+	{
+		free(ptr);
 		return (NULL);
+	}
 
-	p = malloc(size * sizeof(int));
+	p = malloc(new_size);
 
 	if (p == NULL)
 		return (NULL);
 
-	for (h = min, d = 0; h <= max; h++, d++)
-		p[d] = h;
+	t = ptr;
+
+	for (h = 0; h < old_size; h++)
+		p[h] = t[h];
+
+	free(ptr);
 
 	return (p);
 }
