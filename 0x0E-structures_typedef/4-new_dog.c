@@ -19,29 +19,24 @@ int _strlen(const char *str)
 	return (length);
 }
 
-
 /**
- * _cp_string - function that copy two string
+ * _strcopy - a function that returns @dest with a copy of a string from @src
  *
- * @s1 :string parameter
- * @s2: string parameter
+ * @src: string to copy
+ * @dest: copy string to here
  *
- * Return :nothing.
- **/
+ * Return: @dest
+*/
 
-char *_cp_string(char *s1, char *s2)
+char *_strcopy(char *dest, char *src)
 {
-	int h, size;
+	int i;
 
-	size = _strlen(s1);
+	for (i = 0; src[i]; i++)
+		dest[i] = src[i];
+	dest[i] = '\0';
 
-	for (h = 0; h < size; h++)
-		s2[h] = s1[h];
-
-	s2[h] = '\0';
-
-	return (s2);
-
+	return (dest);
 }
 
 /**
@@ -83,9 +78,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	dog->name = _cp_string(name, dog->name);
+	dog->name = _strcopy(dog->name, name);
 	dog->age = age;
-	dog->owner = _cp_string(owner, dog->owner);
+	dog->owner = _strcopy(dog->owner, owner);
 
 	return (dog);
 }
