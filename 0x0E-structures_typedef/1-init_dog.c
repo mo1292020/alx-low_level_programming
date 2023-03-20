@@ -1,13 +1,12 @@
-#include <stdio.h>
 #include "dog.h"
 
 /**
  * init_dog -  function that initialize a variable of type struct dog.
  *
- * @d :dog parameter.
- * @name :string parameter.
- * @age :float parameter.
- * @owner :string parameter.
+ * @d: dog parameter.
+ * @name: string parameter.
+ * @age: float parameter.
+ * @owner: string parameter.
  *
  * Return: nothing.
 */
