@@ -61,13 +61,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (dog->owner == NULL)
 	{
+		free(dog->name);
 		free(dog);
 		return (NULL);
 	}
 
-	dog->name = _cp_string(dog->name, name);
+	dog->name = _cp_string(name, dog->name);
 	dog->age = age;
-	dog->owner = _cp_string(dog->owner, owner);
+	dog->owner = _cp_string(owner, dog->owner);
 
 	return (dog);
 }
