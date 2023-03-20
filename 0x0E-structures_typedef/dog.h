@@ -1,8 +1,6 @@
 #ifndef DOG_H
 #define DOG_H
 
-typedef struct dog dog;
-
 /**
  * struct dog - dog structure
  *
@@ -18,5 +16,10 @@ struct dog
 	float age;
 	char *owner;
 };
+
+/**
+ * dog_t -Typedef for struct dog
+*/
+typedef struct dog dog_t;
 
 #endif /* _OBJECT_LIKE_MACRO_H */
