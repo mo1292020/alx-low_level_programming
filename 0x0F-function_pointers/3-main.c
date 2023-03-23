@@ -4,17 +4,9 @@
 #include <stdlib.h>
 
 /**
- * main - Program Entry
- *
- * Description: Program that takes 4 arguments where 2 are
- *              int variables plus an operator to perform
- *              a function between the two numbers
- *
- *              Usage: ./calc num1 operator num2
- *                         |     |       |     |_ argv[3]
- *                         |     |       |_ argv[2]
- *                         |     |_ argv[1]
- *                         |_ argv[0]
+ * main - Program Entry that takes 4 arguments where 2 are
+ * int variables plus an operator to perform
+ * a function between the two numbers
  *
  * @argc: argument counter
  * @argv: argument vector
@@ -42,13 +34,13 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	if ((*op == '/' || *op == '%') && n2 == 0)
+	if ((*op == 47 || *op == 37) && n2 == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
 
-	printf("%i\n", get_op_func(op)(n1, n2));
+	printf("%d\n", get_op_func(op)(n1, n2));
 
 	return (0);
 
